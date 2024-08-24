@@ -3,6 +3,7 @@ services:
   mailserver:
     image: ghcr.io/docker-mailserver/docker-mailserver:latest
     container_name: ${CONTAINER_NAME}
+    env_file: .env
     # Provide the FQDN of your mail server here (Your DNS MX record should point to this value)
     hostname: ${HOSTNAME}
     # More information about the mail-server ports:
